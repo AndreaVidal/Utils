@@ -1,10 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
+'''
+Return two files, the words that are founded and the words that are still out of vocabulary, because they are not part of the dictionary.
+'''
 ##################################
 #	READ WORDS OVV TXT FILE	     #
 ##################################
-path_file = 'oovs_found.txt';
+path_file = 'oov_found.txt';
 file_txt = open(path_file,'r');
 file_txt_list = file_txt.readlines();
 file_txt.close()
@@ -16,7 +19,7 @@ file_txt.close()
 new_words_dictionary = open('wordsPhonemes.txt','w');
 
 #Create file for saving words that are still out of vocabulary
-wovv = open('D:\\Lip_generation\\MSP_Face_alignment\\Align\\wovv_words3.txt','w');
+wovv = open('still_oov_words.txt','w');
 
 #Procesing the txt file
 for word in file_txt_list:
